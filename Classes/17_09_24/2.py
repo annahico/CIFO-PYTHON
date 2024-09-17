@@ -20,7 +20,7 @@ while contador < num_repeticions:
 
 # opció 3
 
-frase = input ('Entra Frase')+ '\n'
+frase = input ('Entra Frase') + '\n'
 repeticions = int(input('Entra repeticions'))
 
-print(frase*repeticions)
+print(frase * repeticions)
