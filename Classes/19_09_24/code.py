@@ -4,8 +4,10 @@ for fila in llista:
     for element in fila:
         print(element)
 
+llista = [1, 2, 3, 4]
 
-
+for element in llista:
+    print(element)
 
 '''
 [1, 2.5, "hola", True]
