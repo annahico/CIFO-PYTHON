@@ -7,7 +7,7 @@ count = 0   # Inicialitzem un contador a 0.
 while count < 4:  # Continuem fins que tinguem 4 parts vàlides.
     part = input(f"Introdueix la part {count + 1} de l'adreça IP (0-255): ")
     if part.isdigit() and 0 <= int(part) <= 255:  # Validem que sigui un número entre 0 i 255.
-        parts.append(part)  # Afegim la part vàlida a la llista. SI aquesta part està malament, va al ELSE
+        parts.append(part)  # Afegim la part vàlida a la llista. SI aquesta part està malament, va al
         count += 1  # Incrementem el contador.
     else:
         print("Part invàlida. Assegura't que sigui un número entre 0 i 255.")  # Missatge d'error. Les IP només arriben fins 255
