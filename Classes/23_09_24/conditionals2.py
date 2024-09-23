@@ -1,7 +1,6 @@
 import re
 
-# Corrected pattern: 'compile', and match numbers with optional negative sign
-patro = re.compile(r"-?[0-9]+")  #(r"(?<!\S)-?[0-9]+(?!\S)")
+patro = re.compile(r"(?<!\S)-?[0-9]+(?!\S)")  #(r"-?[0-9]+")
 
 entrada = (input("Escriu un número: "))
     # print(patro.findall(entrada)) abans de continuar, fer un PRINT
