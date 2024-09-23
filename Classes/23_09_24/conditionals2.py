@@ -3,7 +3,10 @@ import re
 # Corrected pattern: 'compile', and match numbers with optional negative sign
 patro = re.compile(r"(?<!\S)-?[0-9]+(?!\S)") #(r"-?[0-9]+")
 
-entrada = input("Escriu un número: ")
+entrada = (input("Escriu un número: "))
+
+while len(patro.findall(entrada)) != 1:
+    entrada = (input("Escriu un número: "))
 
 # Find all numbers in the input
 print(patro.findall(entrada))
