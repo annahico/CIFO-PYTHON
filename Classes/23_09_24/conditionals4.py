@@ -6,7 +6,7 @@ while True: # aixi no utilitzem el regex, es un WHILE infinito
     except ValueError: # si no sabem quin tipus d'error tenim, NOMES posem except
         print("Entrada Errònia, torna-hi")  # torna a demanar el número si es erroni
 
-# Condicions per determinar el signe del númeror
+# Condicions per determinar el signe del número
 if numero == 0:
     print(f"El número que has escrit és {numero} i té un valor de 0.")
 
