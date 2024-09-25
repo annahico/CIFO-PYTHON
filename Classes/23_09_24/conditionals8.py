@@ -1,4 +1,4 @@
-# Sumar les potències de 2 menors a 100
+# 7. Sumar les potències de 2 menors a 100
 
 total = 0 # inicialitza la variable total amb un valor de 0, que serà utilitzada per emmagatzemar la suma de les potències de 2
 numero = 1 # es defineix la variable numero, que comença amb el valor 1, la primera potència de 2 (2^0 = 1).

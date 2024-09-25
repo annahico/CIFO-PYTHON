@@ -1,4 +1,4 @@
-# Escriure els 10 primers múltiples de 2
+# 3. Escriure els 10 primers múltiples de 2
 
 multiple = 1 # cada linia es un múltiple
 

@@ -1,4 +1,4 @@
-# Llegeix els quatre nombres que conformen una adreça IP, valida si és una IP correcta i ho escriu.
+# 5. Llegeix els quatre nombres que conformen una adreça IP, valida si és una IP correcta i ho escriu.
 
 
 parts = []  # Inicialitzem una llista per emmagatzemar les parts de l'adreça IP.
