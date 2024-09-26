@@ -2,10 +2,10 @@
 
 llista = [4,3,2,1,8]
 
-llista.reverse()
+llista.reverse() # aquí inverteixo l'ordre de la llista
 print(llista)
 
-l = [5,4,3,2,1]
+l = [5,4,3,2,1] # nom de la nova llista
 
 l.reverse()
 print(l)
