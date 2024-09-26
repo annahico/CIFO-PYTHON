@@ -3,7 +3,7 @@
 def suma_elements(llista): # creació de les funcions
     suma = 0 # 
     for i in llista: # per cada element a la llista :
-        suma += i * i # suma els quadrats
+        suma += i * i # suma els quadrats x2
 
     return suma
 
