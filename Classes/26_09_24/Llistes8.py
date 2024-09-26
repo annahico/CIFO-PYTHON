@@ -15,6 +15,18 @@ print(posicio_parell_llista(llista1))
 print(posicio_parell_llista(llista2))
 
 
+# ---------------------------------------------------------------------------------------------------
+
+def parell(l):
+    resultat = []
+    for posicio in range(0,len(l),2):
+        resultat.append(l[posicio])
+    return resultat
+
+original = [-11,13,1,25]
+parells = parell(original)
+print(parells)
+print (original)
 
 
 

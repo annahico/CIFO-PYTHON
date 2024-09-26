@@ -15,8 +15,8 @@ print(longitud_llista(llista))
 
 # CHAT GPT:
 
-# def longitud_llista(llista):
-#     return [len(cadena) for cadena in llista]
+def longitud_llista(llista):
+    return [len(cadena) for cadena in llista]
 
-# llista = ['hola', 'com', 'estas']
-# print(longitud_llista(llista))
+llista = ['hola', 'com', 'estas']
+print(longitud_llista(llista))

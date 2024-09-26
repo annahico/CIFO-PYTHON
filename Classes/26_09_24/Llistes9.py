@@ -13,3 +13,17 @@ llista2 = [5,4,3,2,1]
 
 print(posicio_senar_llista(llista1))
 print(posicio_senar_llista(llista2))
+
+
+# ---------------------------------------------------------------------------------------------------
+
+def imparell(l):
+    resultat = []
+    for posicio in range(1,len(l),2):
+        resultat.append(l[posicio])
+    return resultat
+
+original = [-11,13,1,25]
+imparells = imparell(original)
+print(imparells)
+print (original)

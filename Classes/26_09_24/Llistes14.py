@@ -6,3 +6,16 @@ def concadena_llista(llista): #FUNCIÓ
 
 llista = ['hola', 'com', 'estas']
 print(concadena_llista(llista)) 
+
+
+
+
+
+def sumastrings(l): #FUNCIÓ
+    resultado = ""
+    for cadena in l:
+        resultado += cadena
+    return resultado
+
+llista = ['hola', 'com', 'estas']
+print(sumastrings(llista)) 

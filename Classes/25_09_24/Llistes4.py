@@ -3,8 +3,8 @@
 def suma_elements(llista): # creació de les funcions
     suma = 0 # 
     for i in llista: # per cada element a la llista :
-        suma += i * i * i # suma els quadrats x3
-
+            suma += i ** 3 # realitza la multiplicació més fàcil
+            # suma += i * i * i    # suma els quadrats x3
     return suma
 
 llista1 = [4,3,2,1,8] # posem la llista 1

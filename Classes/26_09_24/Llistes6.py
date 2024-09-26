@@ -11,6 +11,16 @@ llista_num2 = [5,4,3,2,1] # aqui s'indica el calor de la llista
 print(valor_max2(llista_num2))
 
 
+# ----------------------------------------------------------------------------------------------------
 
+def maxim(l):
+    maxim = l[0]
+    for num in l[1:]:
+        if num > maxim:
+            maxim = num
+    return maxim
+
+original = [-11,13,1,25]
+print(maxim(original))
 
 
