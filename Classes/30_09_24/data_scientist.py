@@ -29,7 +29,7 @@ print(resultat)
 # VERSIÓ 2
 
 matriu = [[2, 5, 10], [6, 7, 9], [4, 5, 10]]
-for element in matriu:  # element es [2,5,10]etc... de la MATRIU
+for element in matriu:  # l'element es [2,5,10]etc... de la MATRIU
     # analitzes totes les POSICIONS de cada ELEMENT(0,1,2, etc)
     for pos in range(len(element)):
         # analitzes la pocisio de cada element i sumes +1 a cada element
