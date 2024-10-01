@@ -55,8 +55,8 @@ print(numero)
 
 
 def afegeix2(n):
-    n += "7"  # STRING
-    return n
+    n += "7"  # STRING es queda igual
+    return n  # es posa RETURN o GLOBAL(millor return) per modificar
 
 
 def afegeix1(n):
@@ -64,8 +64,8 @@ def afegeix1(n):
     return n
 
 
-numero = "5"
+n = "5"
 
-numero = afegeix1(numero)
-numero = afegeix2(numero)
-print(numero)
+n = afegeix1(n)
+n = afegeix2(n)
+print(n)
