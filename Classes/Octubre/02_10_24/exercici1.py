@@ -38,6 +38,8 @@ for cadena in llistastrings:
         cadena = cadena.replace(caracter, "")
     cadena = cadena.split(",")
     resultat.append(cadena)
+resultat = [cadena.replace(" ", "").replace(".", "").replace(
+    "\n", "").split(",")for cadena in llistastrings]
 print(resultat)
 
 
