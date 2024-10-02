@@ -10,3 +10,4 @@ print(len(llistadecadenes))
 matriz = []
 for cadena in llistadecadenes:
     matriz.append(patro.findall(cadena))
+print(matriz[0])
