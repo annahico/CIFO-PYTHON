@@ -12,6 +12,11 @@ matriu = []
 
 for cadena in llistadecadenes:
     matriu.append(patro.findall(cadena))
-for X in matriu:  # X = l'element que volem analitzar
-    print(X)
-    # time.sleep(1)
+
+
+que_volem_analitzar = []
+
+for llista in matriu[1:]:  # X = l'element que volem analitzar
+    que_volem_analitzar.append(int(llista[0]))
+
+    print(llista)
