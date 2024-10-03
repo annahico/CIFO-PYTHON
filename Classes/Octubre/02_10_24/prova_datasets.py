@@ -1,7 +1,8 @@
 import io
 import re
 
-patro = re.compile("[A-Za-z0-9 \\-_]+")
+patro = re.compile(r"[A-Za-z0-9\-': \\/.!$?]+|\"[^\"]*\"")
+
 
 arxiu = io.open("C:\\Users\\Usuario\\Desktop\\Marvel_DC.csv",
                 "r", encoding='utf-8')
