@@ -10,32 +10,26 @@ arxiu = io.open("C:\\Users\\Usuario\\Desktop\\Marvel_DC.csv",
 llistadecadenes = [cadena.replace(",,", ",ND,").replace('""', '')
                    for cadena in arxiu.readlines()]
 
-
+# Es defineixen dues llistes buides, matriu per emmagatzemar les línies processades i longituds per guardar la longitud de cada línia.
 matriu = []
 longituds = []
-for cadena in llistadecadenes:
 
+# Aquí, el codi fa servir l'expressió regular per trobar patrons a cada línia del CSV. El resultat s'emmagatzema en matriu. També es guarda la longitud de cada línia en longituds. La primera línia processada es mostra amb print(matriu[0]).
+for cadena in llistadecadenes:
     temp = patro.findall(cadena)
     matriu.append(temp)
     longituds.append(len(temp))
 print(matriu[0])
 
-
+# Es fa el mateix procés anterior una vegada més, trobant patrons amb l'expressió regular i afegint-los a matriu.
 for cadena in llistadecadenes:
     matriu.append(patro.findall(cadena))
 
+# Es defineixen dues llistes buides per emmagatzemar els gèneres i les puntuacions de les pel·lícules.
 generes = []
-
 score = []
-'''
-scorebaix = 0
-indexbaix = 0
-scoremig = 0
-indexmig = 0
-scorealt = 0
-indexalt = 0
-'''
 
+# Aquí, es recorren les llistes a matriu (excloent la primera fila, que podria ser l'encapçalament). L'element 3 (gènere) i l'element 6 (puntuació) es guarden a les llistes corresponents. Si hi ha un error en convertir la puntuació a float, es mostra un missatge d'error
 for llista in matriu[1:]:
     try:
         generes.append(llista[3])
@@ -43,48 +37,19 @@ for llista in matriu[1:]:
     except ValueError:
         print(f"Error convertint a enter: {llista[6]}")
 print("????????", len(matriu), len(generes), len(score))
+
+# Es fa una llista única de gèneres amb set(), després es creen dues llistes: una per sumar les puntuacions totals de cada gènere (puntuacio) i una altra per comptar quantes vegades apareix cada gènere (comptador).
 classify = list(set(generes))
 # print(set(generes))
 puntuacio = len(classify)*[0]
 comptador = len(classify)*[0]
 
+# Es recorren les primeres 3380 pel·lícules. Per cada pel·lícula, es busca l'índex del seu gènere a la llista classify. Es suma la puntuació de la pel·lícula a puntuacio[indice] i s'incrementa el comptador d'aquell gènere.
 for pos in range(3380):
     indice = classify.index(generes[pos])
     puntuacio[indice] += score[pos]
     comptador[indice] += 1
 
+# Finalment, es calcula la puntuació mitjana de cada gènere dividint la suma total de puntuacions pel nombre de pel·lícules d'aquell gènere. Es mostren els resultats amb un print.
 for pos in range(len(puntuacio)):
-
     print(classify[pos], puntuacio[pos]/comptador[pos])
-
-'''
-    if mitjana_generes[pos] == "High":
-        scorealt += score[pos]
-        indexalt += 1
-
-    elif mitjana_generes[pos] == "Medium":
-        scoremig += score[pos]
-        indexmig += 1
-
-    else:
-        scorebaix += score[pos]
-        indexbaix += 1
-
-# Calcular la mitjana fora del bucle
-if indexbaix > 0:
-    mitjana_baixa = scorebaix / indexbaix
-else:
-    mitjana_baixa = 0
-
-if indexmig > 0:
-    mitjana_mitjana = scoremig / indexmig
-else:
-    mitjana_mitjana = 0
-
-if indexalt > 0:
-    mitjana_alta = scorealt / indexalt
-else:
-    mitjana_alta = 0
-
-print(mitjana_baixa, mitjana_mitjana, mitjana_alta)
-'''
