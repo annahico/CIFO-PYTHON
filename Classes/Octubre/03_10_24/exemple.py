@@ -2,7 +2,7 @@ import io
 import re
 
 patro = re.compile(r"[A-Za-z0-9\-': \\/.!$?]+|\"[^\"]*\"")
-arxiu = io.open("C:\\Users\\Usuario\\Desktop\\Marvel_DC.csv",
+arxiu = io.open("document",
                 "r", encoding='utf-8')
 
 llistadecadenes = [cadena.replace(",,", ",ND,")
