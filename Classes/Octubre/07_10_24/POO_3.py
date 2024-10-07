@@ -6,10 +6,13 @@ class circulo:
 
     def __init__(self,radio) -> None:
         self.radio = radio
+
     def area(self):
         return math.pi*(self.radio)**2
+    
     def perimetro(self):
         return 2*math.pi*self.radio
+    
     def __str__(self) -> str:
         return f"Este es un objeto círculo con radio {self.radio}"
     

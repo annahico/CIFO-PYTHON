@@ -27,6 +27,7 @@ class cadena:
         return f"La cadena tiene este valor: {self.cadena}"
         pass
 
+
 c1= cadena("Soy tu primera cadena") # creado el objeto c1 que es la cadena 1
 c1.print_string()
 print(c1.longitud())
