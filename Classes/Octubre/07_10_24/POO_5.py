@@ -9,6 +9,12 @@ class triangulo:
         self.lado2 = lado2
         self.lado3 = lado3
 
+    def estriangulo(self):
+        if (self.lado1 >= self.lado2 + self.lado3) or (self.lado2 >= self.lado1 + self.lado3) or (self.lado3 >= self.lado1 + self.lado2):
+            return False
+        else:
+            return True
+
     def mayor(self):
         if self.lado1 >= self.lado2 and self.lado2 >= self.lado3:
             return self.lado1
@@ -29,7 +35,7 @@ class triangulo:
         return f"Este es un objeto triangulo con lados {self.lado1},{self.lado2},{self.lado3}"
     
 
-triangulo1 = triangulo(7,1,1)
+triangulo1 = triangulo(7,1,0)
 print(triangulo1)
 print(triangulo1.mayor())
 print(triangulo1.tipo())
