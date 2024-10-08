@@ -67,3 +67,29 @@ cuenta1.retirar(600)
 
 # Retirar una cantidad válida
 cuenta1.retirar(200)
+
+
+# ---------------------------------------------------------------------------------------------------
+
+class CCC:
+    def __init__(self, nom, cognom, nCCC, tipo) -> None:
+        self.nom = nom
+        self.cognom = cognom  # Fixed name to match throughout the code
+        self.nCCC = nCCC
+        self.tipo = tipo
+        self.saldo = 0  # Initial balance
+
+    def mostrar_saldo(self):
+        print(f"El saldo actual és: {self.saldo}")
+
+    def __str__(self) -> str:
+        return (f"El nom i cognoms de la persona titular és: {self.nom} {self.cognom}\n"
+                f"El número de compte és: {self.nCCC}\n"
+                f"El compte és del tipus: {self.tipo}\n"
+                f"La persona titular té un saldo de {self.saldo}\n")
+
+
+c = CCC("Cristian", "Compi Esquerra", 1234567890, "credit")
+
+print(c)
+c.mostrar_saldo()  # Renamed method for clarity
