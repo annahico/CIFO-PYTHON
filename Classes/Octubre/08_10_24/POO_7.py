@@ -17,29 +17,53 @@
 # - Retirar un determinado valor de la cuenta bancaria, actualizando el saldo correspondiente. Es necesario tener en cuenta que no se puede realizar el retiro si el valor solicitado supera el saldo actual de la cuenta.
 
 
-class cuenta:
+class Cuenta:
+    def __init__(self, nombres, apellidos, numero, tipo):
+        self.nombres = nombres
+        self.apellidos = apellidos
+        self.numero = numero
+        self.tipo = tipo
+        self.saldo = 0  # El saldo inicial es 0
 
-    def __init__(self) -> None:
-        pass
+    def consultar_saldo(self):
+        return self.saldo
 
-    def nombre(self):
-        pass
+    def consignar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            print(f"Consignación de {
+                  valor} realizada. Saldo actual: {self.saldo}")
+        else:
+            print("El valor a consignar debe ser positivo.")
 
-    def apellidos(self):
-        pass
+    def retirar(self, valor):
+        if valor > self.saldo:
+            print(f"No es posible retirar {
+                  valor}. Saldo insuficiente: {self.saldo}")
+        elif valor > 0:
+            self.saldo -= valor
+            print(f"Retiro de {valor} realizado. Saldo actual: {self.saldo}")
+        else:
+            print("El valor a retirar debe ser positivo.")
 
-    def numero(self):
-        pass
-
-    def saldo(self):
-        pass
-
-    def __str__(self) -> str:
-        pass
-    
+    def __str__(self):
+        return f"Cuenta {self.tipo} - Titular: {self.nombres} {self.apellidos}, Número: {self.numero}, Saldo: {self.saldo}"
 
 
-cuenta1 = cuenta()
-        
-        
+# Ejemplo de uso
+cuenta1 = Cuenta("Juan", "Pérez", "123456789", "Ahorros")
 
+# Imprimir detalles de la cuenta
+print(cuenta1)
+
+# Consultar saldo
+print("Saldo actual:", cuenta1.consultar_saldo())
+
+# Consignar dinero
+cuenta1.consignar(500)
+
+# Intentar retirar más de lo que hay en la cuenta
+cuenta1.retirar(600)
+
+# Retirar una cantidad válida
+cuenta1.retirar(200)
