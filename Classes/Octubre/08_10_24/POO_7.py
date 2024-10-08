@@ -74,10 +74,10 @@ cuenta1.retirar(200)
 class CCC:
     def __init__(self, nom, cognom, nCCC, tipo) -> None:
         self.nom = nom
-        self.cognom = cognom  # Fixed name to match throughout the code
+        self.cognom = cognom
         self.nCCC = nCCC
         self.tipo = tipo
-        self.saldo = 0  # Initial balance
+        self.saldo = 0
 
     def mostrar_saldo(self):
         print(f"El saldo actual és: {self.saldo}")
@@ -92,4 +92,4 @@ class CCC:
 c = CCC("Cristian", "Compi Esquerra", 1234567890, "credit")
 
 print(c)
-c.mostrar_saldo()  # Renamed method for clarity
+c.mostrar_saldo()
