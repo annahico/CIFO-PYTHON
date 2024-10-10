@@ -4,10 +4,8 @@
 
 
 def factorial(n):
-    # Calcula el factorial d'un número n.
-    if n < 0:
-        return None  # El factorial no està definit per a números negatius
-    elif n == 0 or n == 1:
+    # Funció que calcula el factorial d'un número n.
+    if n == 0 or n == 1:
         return 1
     else:
         result = 1
@@ -17,30 +15,27 @@ def factorial(n):
 
 
 def main():
-    # Funció principal que gestiona la introducció de números i la seva processament.
-    count = 0  # Contador de números llegits
+    # unció principal del programa.
+    count = 0  # Contador per a la quantitat total de números llegits
 
     while True:
-        # Sol·licitem un número a l'usuari
-        number = int(input("Introdueix un número (0 per acabar): "))
+        # Sol·licitar un número a l'usuari
+        num = int(input("Introdueix un número (0 per acabar): "))
 
-        # Si el número és 0, acabem el bucle
-        if number == 0:
+        # Comprovem si el número és zero per acabar
+        if num == 0:
             break
 
-        # Incrementem el contador
+        # Calcular i mostrar el factorial del número
+        fact = factorial(num)
+        print(f"El factorial de {num} és {fact}.")
+
+        # Incrementar el contador de números llegits
         count += 1
 
-        # Calculem el factorial del número
-        fact = factorial(number)
-
-        # Mostrem el resultat
-        print(f"El factorial de {number} és: {fact}")
-
-    # Mostrem la quantitat total de números llegits
-    print(f"Total de números llegits: {count}")
+    # Mostrar la quantitat total de números llegits
+    print(f"Has introduït un total de {count} números.")
 
 
-# Executem el programa
-if __name__ == "__main__":
-    main()
+# Executar el programa
+main()
