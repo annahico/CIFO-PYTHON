@@ -18,18 +18,14 @@ def suma_digits(num):
 def main():
     # Funció principal del programa.
     numeros = []
-
     while True:
         # Sol·licitar un número a l'usuari
         num = int(input("Introdueix un número (0 per acabar): "))
-
         # Comprovem si el número és zero per acabar
         if num == 0:
             break
-
         # Afegim el número a la llista
         numeros.append(num)
-
     # Mostrar el resultat final
     for numero in numeros:
         suma = suma_digits(numero)

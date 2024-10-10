@@ -17,22 +17,18 @@ def factorial(n):
 def main():
     # unció principal del programa.
     count = 0  # Contador per a la quantitat total de números llegits
-
     while True:
         # Sol·licitar un número a l'usuari
         num = int(input("Introdueix un número (0 per acabar): "))
-
         # Comprovem si el número és zero per acabar
         if num == 0:
             break
-
         # Calcular i mostrar el factorial del número
         fact = factorial(num)
         print(f"El factorial de {num} és {fact}.")
 
         # Incrementar el contador de números llegits
         count += 1
-
     # Mostrar la quantitat total de números llegits
     print(f"Has introduït un total de {count} números.")
 

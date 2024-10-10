@@ -16,7 +16,6 @@
 def ultimalen(cadena):
     # Eliminem espais al principi i al final, i separem la cadena per espais
     paraules = cadena.strip().split()
-
     # Si la llista de paraules no és buida, retornem la longitud de l'última paraula
     if paraules:
         return len(paraules[-1])
@@ -24,5 +23,4 @@ def ultimalen(cadena):
         return 0  # Si no hi ha paraules, retornem 0
 
 
-# Exemple d'ús
 print(ultimalen(" Tinc tanta son que a les cinc tinc son "))  # Imprimirà 3
